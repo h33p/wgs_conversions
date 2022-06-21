@@ -26,6 +26,9 @@ option(BUILD_ROS_NODE "Build ROS node." ON)
 
 option(BUILD_EXAMPLE "Build Example." OFF)
 
+if(BUILD_ROS_NODE)
+	SET(BUILD_WITH_CATKIN ON)
+endif(BUILD_ROS_NODE)
 
 if (BUILD_WITH_CATKIN)
   set(catkin_components )
